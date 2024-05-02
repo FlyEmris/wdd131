@@ -52,3 +52,10 @@ h2::after {
     padding-bottom: 50px;
     padding-top: 50px;
 }
+.dark {
+    background-color: #333;
+    color: white;
+}
+.dark h2 {
+    color: #98cdf0;
+}
