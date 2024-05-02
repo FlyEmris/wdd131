@@ -1,15 +1,12 @@
 const themeSelector = document.getElementById('theme');
-const lightLogo = document.getElementById('logo');
-const darkLogo = document.getElementById('dark-logo');
+const logo = document.getElementById('logo');
 
 themeSelector.addEventListener('change', function(){
     if (this.value === 'dark') {
         document.body.classList.add('dark');
-        lightLogo.style.display = 'none';
-        darkLogo.style.display = 'block';
+        logo.src = 'byui-logo_white.png';
     } else {
         document.body.classList.remove('dark');
-        lightLogo.style.display = 'block';
-        darkLogo.style.display = 'none';
+        logo.src = 'byui-logo_blue.webn';
     }
 });
