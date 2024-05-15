@@ -82,14 +82,48 @@ footer {
     padding-left: 100px;
 }
 
-@media screen and (max-width: 700px) {
-    /* Stack headers on top of each other */
+@media screen and (min-width: 700px) {
+    .dropdown {
+        display: none; /* Hide the dropdown menu button on big screens */
+    }
+
     ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 
     li {
-        margin-bottom: 10px; /* Add spacing between stacked headers */
+        margin-right: 20px;
     }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+
+.dropdown-content a {
+    display: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.dropdown.active .dropdown-content {
+    display: none;
 }
