@@ -1,9 +1,10 @@
+User
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Pics</title>
+    <title>Document</title>
     <link rel="stylesheet" href="coolpics.css">
 </head>
 <body>
@@ -13,13 +14,25 @@
     </div>
     <header>
         <h1>Cool Pics 📷</h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#people">People</a></li>
-            <li><a href="#places">Places</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <nav>
+            <ul id="menu">
+                <li class="big"><a href="#home">Home</a></li>
+                <li class="big"><a href="#people">People</a></li>
+                <li class="big"><a href="#places">Places</a></li>
+                <li class="big"><a href="#about">About</a></li>
+                <li class="big"><a href="#contact">Contact</a></li>
+                <li class="dropdown" id="dropdown">
+                    <button onclick="toggleDropdown()" id="dropdown-button">Menu &#x25BE;</button>
+                    <ul id="submenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#people">People</a></li>
+                        <li><a href="#places">Places</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h1>Current Work</h1>
