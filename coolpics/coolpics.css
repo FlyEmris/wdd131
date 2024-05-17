@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 :root {
-    --primary-color: #52489c;
-    --secondary-color: #59c3c3;
-    --accent-color: #f45b69;
+    --primary-color: #02010a;
+    --secondary-color: #ff00c8;
+    --accent-color: #ff057a;
     --text-dark: #333;
-    --text-light: #ebebeb;
+    --text-light: #ff057a;
     --primary-font: Arial, Helvetica,sans-serif;
     --secondary-font: Mooli, san-serif;
     }
@@ -12,12 +12,16 @@ header {
     text-align: center;
     background-color: var(--primary-color); /* Purple background */
     color: var(--text-light); /* Light text color */
-    padding: 20px; /* Add padding for better readability */
+    padding: 40px; /* Add padding for better readability */
     
 }
 
 main {
     background-color: #f9f9f9;
+}
+
+main h2 {
+    text-align: center;
 }
 
 body {
@@ -34,12 +38,14 @@ img {
     border: 5px solid #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-
+#dropdown-button {
+    display: none;
+}
 @media screen and (min-width: 700px) {
     .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
+        gap: 10px;
         margin: 0 auto;
         max-width: 800px;
         padding: 20px;
@@ -83,13 +89,142 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-    /* Stack headers on top of each other */
     ul {
         flex-direction: column;
         align-items: center;
     }
 
     li {
-        margin-bottom: 10px; /* Add spacing between stacked headers */
+        margin-bottom: 10px;
+    }
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu li {
+    margin-right: 20px;
+}
+
+/* Styles for the submenu */
+#submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+#submenu li {
+    margin: 5px 0;
+}
+
+/* Media query for small screens *//* Media query for small screens */
+@media only screen and (max-width: 700px) {
+    /* Hide the menu items when the button is clicked */
+    .big{
+        display: none;
+    }
+
+    #dropdown:not(.open) #submenu {
+        display: none;
+    }
+
+    /* Show the submenu when the button is clicked */
+    #dropdown.open #submenu {
+        display: block;
+    }
+
+    /* Show the dropdown button on small screens */
+    #dropdown-button {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--accent-color); /* Text color */
+        font-size: inherit;
+        cursor: pointer;
+    }
+    
+    #dropdown-button:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+
+    /* Hide the menu items on small screens */
+    #submenu {
+        display: none;
+    }
+}
+
+main h1 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+div {
+    position: fixed;
+}
+
+/* CSS for modal */
+.viewer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.viewer img {
+    display: block;
+    margin: auto;
+    margin-top: 10vh; /* Adjust as needed */
+    max-width: 80%;
+    max-height: 80vh;
+}
+
+.viewer button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.viewer button:hover {
+    color: red; /* Change color on hover */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    transition: grid-template-columns 0.5s ease; /* Transition for column change */
+}
+
+@media screen and (max-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Change to 1 column on even smaller screens */
     }
 }
