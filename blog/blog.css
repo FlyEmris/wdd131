@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    border: 1px solid peachpuff;
+    margin: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    border-color: maroon;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 3;
+}
+
+.article {
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.article-left, .article-middle {
+    padding: 10px;
+}
+
+.article-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid peachpuff;
+}
+
+.article-middle {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.article img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.article h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-align: center;
+    color: maroon;
+}
+
+.article p {
+    margin: 5px 0;
+}
+
+.article .stars {
+    color: gold;
+    font-size: 1.2em;
+}
+
+#filter-box {
+    flex: 1;
+    border: 1px solid peachpuff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
