@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap');
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: "Playwrite AU VIC";
+    --secondary-font: "Playwrite AU VIC";
+}
+
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Playwrite AU VIC";
+    line-height: 1.6;
+}
+
+header {
+    background-color: none;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content img {
+    margin-right: 10px;
+    width: 50px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.search-box button img {
+    width: 20px;
+    height: auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+main {
+    padding: 20px;
+    border: #333 solid 1px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+
+main .recipe-box {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+main .recipe-box img {
+    flex: 1;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+main .recipe-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .recipe-details .tags {
+    display: inline-block; /* Add this line */
+    color: black;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border: #333 solid 1px;
+    border-width: 2px;
+    padding: 5px; /* Add some padding if needed */
+}
+
+main .recipe-details h2 {
+    margin: 0 0 10px;
+    color: var(--primary-color);
+}
+
+main .recipe-details .description {
+    margin-bottom: 10px;
+}
+
+main .recipe-details .rating {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+main .recipe-details .rating .icon-star, 
+main .recipe-details .rating .icon-star-empty {
+    margin-right: 5px;
+    font-size: 1.5em;
+}
+
+footer {
+    background-color: none;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer .social {
+    margin-bottom: 10px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+    main .recipe-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .recipe-box img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    main .recipe-details .description {
+        display: none;
+    }
+}
