@@ -49,7 +49,7 @@ function createRecipeBox(recipe) {
     // cookTime.classList.add('cook-time');
     // cookTime.textContent = `Cook Time: ${recipe.cookTime}`;
 
-    const tags = document.createElement('h3');
+    const tags = document.createElement('div');
     tags.classList.add('tags');
     tags.textContent = recipe.tags;
 

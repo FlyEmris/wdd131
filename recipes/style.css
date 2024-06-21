@@ -106,14 +106,15 @@ main .recipe-details {
 }
 
 main .recipe-details .tags {
-    display: inline-block; /* Add this line */
-    color: black;
+    /* display: inline-block; */
+    color: #59c3c3;
     font-size: 1.2em;
     margin-bottom: 10px;
-    border: #333 solid 1px;
+    /* border: #333 solid 1px; */
     border-width: 2px;
-    padding: 5px; /* Add some padding if needed */
+    
 }
+
 
 main .recipe-details h2 {
     margin: 0 0 10px;
