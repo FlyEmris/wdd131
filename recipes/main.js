@@ -3,6 +3,7 @@ import recipes from './recipes.mjs';
 // Function to create and append elements
 function createRecipeBox(recipe) {
     const container = document.getElementById('recipe-container');
+    container.innerHTML = '';  // Clear previous content
 
     // Create elements
     const recipeBox = document.createElement('div');
@@ -41,31 +42,15 @@ function createRecipeBox(recipe) {
         ratingContainer.appendChild(star);
     }
 
-    // const author = document.createElement('p');
-    // author.classList.add('author');
-    // author.textContent = `Author: ${recipe.author}`;
-
-    // const cookTime = document.createElement('p');
-    // cookTime.classList.add('cook-time');
-    // cookTime.textContent = `Cook Time: ${recipe.cookTime}`;
-
     const tags = document.createElement('div');
     tags.classList.add('tags');
-    tags.textContent = recipe.tags;
-
-    const rating = document.createElement('p');
-    rating.classList.add('rating');
-    rating.textContent = `Rating: ${recipe.rating}`;
+    tags.textContent = recipe.tags.join(', '); // Join tags array to a comma-separated string
 
     // Append elements
     details.appendChild(tags);
     details.appendChild(title);
     details.appendChild(ratingContainer);
     details.appendChild(description);
-    // details.appendChild(author);
-    // details.appendChild(cookTime);
-    // details.appendChild(tags);
-    // details.appendChild(rating);
 
     recipeBox.appendChild(img);
     recipeBox.appendChild(details);
@@ -73,5 +58,31 @@ function createRecipeBox(recipe) {
     container.appendChild(recipeBox);
 }
 
-// Call the function with the desired recipe from the recipes array
-createRecipeBox(recipes[0]); // Displaying the first recipe in the array for example
+// Function to display a random recipe
+function displayRandomRecipe() {
+    const randomIndex = Math.floor(Math.random() * recipes.length);
+    createRecipeBox(recipes[randomIndex]);
+}
+
+// Function to filter recipes based on a search query
+function filterRecipes(query) {
+    const filteredRecipes = recipes.filter(recipe => 
+        recipe.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
+    );
+
+    if (filteredRecipes.length > 0) {
+        createRecipeBox(filteredRecipes[0]);
+    } else {
+        const container = document.getElementById('recipe-container');
+        container.innerHTML = '<p>No recipes found</p>';
+    }
+}
+
+// Event listener for search functionality
+document.getElementById('search-button').addEventListener('click', () => {
+    const query = document.getElementById('search-input').value.toLowerCase();
+    filterRecipes(query);
+});
+
+// Display a random recipe on page load
+window.addEventListener('load', displayRandomRecipe);
