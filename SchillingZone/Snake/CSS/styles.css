@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+:root {
+    --primary-color: #8ECAE6;
+    --secondary-color: #219EBC;
+    --text-dark: #FB8500;
+    --text-light: #FFB703;
+    --primary-font: 'Gloria Hallelujah', cursive;
+    --secondary-font: 'Gloria Hallelujah', cursive;
+    /* other colors #023047, #FFB703, #FB8500 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('path_to_background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+canvas {
+    border: 5px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+.game-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.game-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    font-size: 1.2rem;
+}
