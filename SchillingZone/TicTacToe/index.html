@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Snake/index.html">Snake Game</a></li>
+            </ul>
+        </nav>
+        <h1>Tic Tac Toe</h1>
+    </header>
     <div class="container">
-        <canvas id="gameCanvas"></canvas>
+        <canvas id="gameCanvas" width="450" height="450"></canvas>
         <div class="game-info">
+            <button id="reset-button">Reset</button>
             <h1>Welcome to Tic Tac Toe!</h1>
             <p>Be the first to get three in a row!</p>
         </div>

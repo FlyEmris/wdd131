@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         if (keyMap[event.key]) {
+            event.preventDefault();  // Prevent the default scrolling behavior
             direction = keyMap[event.key];
         }
     }
