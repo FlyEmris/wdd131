@@ -85,4 +85,4 @@ function resetGame() {
     drawBoard();
 }
 
-drawBoard();
+drawBoard(); // Draw the initial board
